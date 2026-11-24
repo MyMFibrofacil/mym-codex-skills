@@ -1,6 +1,6 @@
 ---
 name: xubio-papeles-rivadavia
-description: Gestiona en Xubio los papeles de Carpintería Rivadavia a partir de presupuestos pendientes de aprobar: revisar y elegir el presupuesto, aprobarlo, crear el comprobante de venta con sus datos, dejar el presupuesto en estado Facturado, crear el remito e imprimir el Remito Valorizado tipo 4. Usar ante pedidos como “hacer/preparar/imprimir papeles de Rivadavia”.
+description: "Gestiona en Xubio los papeles de Carpintería Rivadavia desde presupuestos pendientes; revisar y elegir el presupuesto, aprobarlo, crear el comprobante de venta con sus datos, dejar el presupuesto Facturado, crear el remito e imprimir el Remito Valorizado tipo 4. Usar ante pedidos de papeles de Rivadavia."
 ---
 
 # Papeles de Carpintería Rivadavia en Xubio
