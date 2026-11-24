@@ -1,0 +1,4 @@
+interface:
+  display_name: "Papeles Rivadavia en Xubio"
+  short_description: "Presupuesto, comprobante y remito valorizado"
+  default_prompt: "Usá esta skill para preparar los papeles de Carpintería Rivadavia en Xubio. Revisá los presupuestos pendientes, pedí elección si hay varios y confirmación antes de escribir."
