@@ -22,7 +22,7 @@ El comprobante debe conservar cliente, productos, cantidades, precios, descuento
 - Usar la API y el cliente Xubio configurados para el proyecto activo. Revisar el catálogo operativo y el playbook antes de escribir. No inventar endpoints, campos, IDs, puntos de venta, talonarios, depósitos ni condiciones.
 - Mantener las credenciales en la configuración local. Nunca mostrar, pedir, copiar a la respuesta ni registrar client_secret, tokens, cookies o sessionidlocal.
 - Resolver en vivo el registro exacto de **Carpintería Rivadavia** y los presupuestos en estado **Pendiente de Aprobar**. No identificar al cliente solo por coincidencia parcial.
-- Si hay un presupuesto, preparar ese. Si hay varios, mostrar número, fecha, estado, total e ítems y esperar que Pablo elija por número. No modificar los no seleccionados.
+- Si hay un presupuesto, preparar ese. Si hay varios, mostrar número, fecha, estado, total e ítems y esperar que la persona autorizada elija por número. No modificar los no seleccionados.
 - Antes de la primera escritura, mostrar una vista previa completa y pedir confirmación inequívoca del flujo entero: aprobación, cambio a Facturado, comprobante independiente, remito e impresión valorizada tipo 4.
 - Ejecutar y verificar cada transición antes de pasar a la siguiente. No asumir que HTTP 200 significa éxito funcional.
 - Evitar duplicados: antes de reintentar una creación, consultar si el objeto ya existe. Usar externalId idempotente cuando el cliente API lo soporte; registrar IDs y números devueltos.
@@ -37,7 +37,7 @@ El comprobante debe conservar cliente, productos, cantidades, precios, descuento
 - Consultar el cliente exacto y sus presupuestos pendientes de aprobar.
 - Leer el detalle completo de cada candidato: renglones, precios, descuentos, IVA, total, condición de pago y referencias disponibles.
 - Si no hay pendientes, informarlo y no crear un presupuesto nuevo.
-- Si hay varios, esperar que Pablo elija el número. Si hay uno, preparar la vista previa.
+- Si hay varios, esperar que la persona autorizada elija el número. Si hay uno, preparar la vista previa.
 
 ### 2. Mostrar y confirmar
 
@@ -84,3 +84,8 @@ Si el proceso queda incompleto, enumerar las etapas completadas, el último esta
 ## Referencia técnica
 
 Consultar [references/referencias-xubio.md](references/referencias-xubio.md) junto con el catálogo y la configuración vigentes del proyecto.
+
+## Integración con Asistente_Codex
+
+Esta skill es la guía operativa para las respuestas de Codex. En el proyecto Asistente_Codex, delegar las escrituras y la impresión al flujo existente de `app/tool_agent.py` y `app/administration/service.py`, que es el ejecutor de Xubio. Usar su vista previa y confirmación como puerta obligatoria; no iniciar una segunda secuencia de escrituras directamente contra la API.
+
