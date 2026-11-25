@@ -13,5 +13,6 @@ Las skills contienen instrucciones y referencias. Cada equipo debe configurar po
 ## Skills disponibles
 
 - [Papeles de Carpintería Rivadavia en Xubio](skills/xubio-papeles-rivadavia/): presupuestos, comprobante de venta y remito valorizado.
+- [Imágenes de producto para Instagram](skills/mym-imagenes-producto-instagram/): publicaciones visuales para MyM Fibrofacil siguiendo la plantilla aprobada de Cocina Pocket.
 
 Para sumar una skill, crear una carpeta nueva en skills/<nombre> con su SKILL.md, las referencias necesarias y, si corresponde, metadatos de agente.
